@@ -1,0 +1,18 @@
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+  crossorigin="anonymous"
+/>
+<link rel="stylesheet" href="static/style.css" /> <br /><br />
+{% include 'nav.htm' %} {% for post_data in post %}
+
+<p class="text-center fs-1">{{post_data["title"]}}</p>
+<p class="text-md-start">{{post_data["content"]}}</p>
+<p class="text-center fst-italic">
+  <strong>{{post_data["author"]}}</strong> - {{post_data["email"]}} -
+  {{post_data["date"].strftime("%d/%m/%y")}}
+</p>
+
+<hr />
+{% endfor %}

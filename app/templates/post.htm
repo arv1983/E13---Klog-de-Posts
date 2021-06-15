@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="../static/style.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+
+
+{% include 'nav.htm' %}
+
+
+<br /><br />
+<div style="max-width: 300px;
+justify-content: center;
+align-items: center;
+margin: 0 auto;">
+    <form method="post" action="/api/posts">
+        <div class="mb-3">
+        <label for="Titulo" class="form-label">Titulo:</label>
+            <input name='title' value='titulo' class="form-control"> </input>
+        </div>
+        <div class="mb-3">
+        <label for="Conteudo">Conteudo:</label>
+            <textarea name='content' value='conteudo' class="form-control" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+        <label for="Autor">Autor:</label>
+            <input name='author' value='autor' class="form-control"></input>
+        </div>
+        <div class="mb-3">
+        <label for="email">Email:</label>
+            <input name='email' value='email' class="form-control"></input>
+        </div>
+            
+        
+    <button class="btn btn-secondary" color="black" type="submit">enviar</button>
+    
+    </form>
+</div>
+

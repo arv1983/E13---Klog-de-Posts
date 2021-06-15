@@ -61,6 +61,14 @@ def post():
     return render_template('post.htm')
 
 
+@app.route('/api/posts/<int:post_id>', methods=["GET"])
+def post_unique(post_id):
+    gets = productModel()
+    all = gets.query.filter_by(id=post_id)
+    
+    return render_template('index.htm', post=all)
+
+
 
 
 

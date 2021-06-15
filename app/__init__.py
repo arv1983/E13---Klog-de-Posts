@@ -29,6 +29,10 @@ db.init_app(app)
 with app.app_context():
     db.create_all()
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
 @app.route('/', methods=["GET"])
 def get_create():
     get = productModel()
